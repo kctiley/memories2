@@ -40,4 +40,23 @@ router.post('/api/v1/memories', function(req, res, next) {
   });
 });
 
+
+router.get('/api/v1/memories/:year', function(req, res, next) {
+  pg.connect(conString, function(err, client, done) {
+    if (err) {
+      return console.error('error fetching client from pool', err);
+    }
+    client.query('SELECT * from memories where year = ' + req.params.year, function(err, result) {
+      done();
+      console.log(result.rows)
+      res.json(result.rows);
+      if (err) {
+        return console.error('error running query', err);
+      }
+      console.log('connected to db')
+    });
+  });
+});
+
+
 module.exports = router;
