@@ -8,4 +8,4 @@
 
 Notes:
 
-dbname: g12-klint-tiley-memoriesdb
+dbname: g12-klint-tiley-memories2db
