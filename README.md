@@ -9,3 +9,5 @@
 Notes:
 
 dbname: g12-klint-tiley-memories2db
+
+postgres://pqzrruzx:E7cfGocL3AGAWUFI206I0twmAOu4a3p0@pellefant-01.db.elephantsql.com:5432/pqzrruzx
